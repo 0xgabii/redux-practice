@@ -35,11 +35,7 @@ class Counter extends Component {
     return (
       <div style={style}>
         <Value number={this.props.number} />
-        <Control 
-          onPlus={this.props.handleIncrement}
-          onMinus={this.props.handleDecrement}  
-          onRandomizecolor={this.setRandomColor}
-        />
+        <Control {...this.props} />
       </div>
     );
   }

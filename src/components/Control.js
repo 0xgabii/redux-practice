@@ -16,12 +16,14 @@ const defaultProps = {
   onRandomizecolor: () => createWarning('onRandomizecolor'),  
 }
 
-const Control = (props) => {
+const Control = ({ handleIncrement: onPlus,
+                   handleDecrement: onMinus,
+                   setRandomColor: onRandomizecolor }) => {
   return (
     <div>
-      <button onClick={props.onPlus}>Plus</button>
-      <button onClick={props.onMinus}>Minus</button>
-      <button onClick={props.onRandomizecolor}>RandomColor</button>
+      <button onClick={onPlus}>Plus</button>
+      <button onClick={onMinus}>Minus</button>
+      <button onClick={onRandomizecolor}>RandomColor</button>
     </div>
   );
 };
